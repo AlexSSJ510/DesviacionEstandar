@@ -38,6 +38,10 @@ class PruebasDesvEstandar(unittest.TestCase):
     def test_media_elementos_no_numericos(self):
         with self.assertRaises(TypeError):
             self.DesviacionEstandar.agregar_elemento("a")
+    def test_desviacion_estandar_lista_vacia(self):
+        with self.assertRaises(NoSePuedeCalcular):
+            self.DesviacionEstandar.desviacion_estandar()
+
 
 
 if __name__ == '__main__':

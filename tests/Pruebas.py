@@ -20,6 +20,10 @@ class PruebasDesvEstandar(unittest.TestCase):
         self.DesviacionEstandar.agregar_elemento(6)
         self.assertEqual(self.DesviacionEstandar.media(), 5)
 
+    def test_media_n_elementos_positivos(self):
+        for i in range(1, 6):
+            self.DesviacionEstandar.agregar_elemento(i)
+        self.assertEqual(self.DesviacionEstandar.media(), 3)
 
 if __name__ == '__main__':
     unittest.main()

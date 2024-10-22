@@ -46,6 +46,11 @@ class PruebasDesvEstandar(unittest.TestCase):
         self.DesviacionEstandar.agregar_elemento(5)
         self.assertEqual(self.DesviacionEstandar.desviacion_estandar(), 0.0)
 
+    def test_desviacion_estandar_dos_elementos(self):
+        self.DesviacionEstandar.agregar_elemento(4)
+        self.DesviacionEstandar.agregar_elemento(6)
+        self.assertEqual(self.DesviacionEstandar.desviacion_estandar(), 1.0)
+
 
 
 if __name__ == '__main__':

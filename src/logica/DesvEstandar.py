@@ -1,7 +1,7 @@
 import math
 
 
-class NoSePuedeCalcular(Exception):
+class NosePuedecalcular(Exception):
     pass
 
 
@@ -28,14 +28,14 @@ class DesviacionEstandar:
 
     def media(self):
         if len(self.elementos) == 0:
-            raise NoSePuedeCalcular("No se puede calcular el promedio de una lista vacía.")
+            raise NosePuedecalcular("No se puede calcular el promedio de una lista vacía.")
 
         total = sum(self.elementos)
         return total / len(self.elementos)
 
     def desviacion_estandar(self):
         if len(self.elementos) == 0:
-            raise NoSePuedeCalcular("No se puede calcular la desviación estándar de una lista vacía.")
+            raise NosePuedecalcular("No se puede calcular la desviación estándar de una lista vacía.")
 
         if len(self.elementos) == 1:
             return 0.0
@@ -53,5 +53,5 @@ if __name__ == "__main__":
     try:
         print(f"Promedio: {estadisticas.media()}")
         print(f"Desviación Estándar: {estadisticas.desviacion_estandar()}")
-    except NoSePuedeCalcular as e:
+    except NosePuedecalcular as e:
         print(e)

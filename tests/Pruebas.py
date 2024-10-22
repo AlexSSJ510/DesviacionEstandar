@@ -1,6 +1,6 @@
 import unittest
 from src.logica.DesvEstandar import DesviacionEstandar
-from src.logica.DesvEstandar import NoSePuedeCalcular
+from src.logica.DesvEstandar import NosePuedecalcular
 
 
 class PruebasDesvEstandar(unittest.TestCase):
@@ -8,7 +8,7 @@ class PruebasDesvEstandar(unittest.TestCase):
         self.DesviacionEstandar = DesviacionEstandar()
 
     def test_media_lista_vacia(self):
-        with self.assertRaises(NoSePuedeCalcular):
+        with self.assertRaises(NosePuedecalcular):
             self.DesviacionEstandar.media()
 
     def test_media_un_elemento(self):
@@ -39,7 +39,7 @@ class PruebasDesvEstandar(unittest.TestCase):
         with self.assertRaises(TypeError):
             self.DesviacionEstandar.agregar_elemento("a")
     def test_desviacion_estandar_lista_vacia(self):
-        with self.assertRaises(NoSePuedeCalcular):
+        with self.assertRaises(NosePuedecalcular):
             self.DesviacionEstandar.desviacion_estandar()
 
     def test_desviacion_estandar_un_elemento(self):

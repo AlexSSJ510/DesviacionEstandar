@@ -35,8 +35,6 @@ Desviación Estándar: 5.0
     
 Para ejecutar las pruebas unitarias, sigue estos pasos:
 
-1. Abre una terminal.
-2. Navega hasta el directorio donde se encuentra el archivo de prueba Prueba.py.
-3. Ejecuta el siguiente comando:
-   
-python -m unittest pruebas.py
+1. Abre el archivo.
+2. Navega hasta el directorio donde se encuentra el archivo de prueba tests/Prueba.py.
+3. Ejecuta el archivo.
